@@ -39,3 +39,25 @@ pciutils.efi is a UDK/EDK2 porting of the GNU's [pciutils](https://github.com/pc
 2. The double/triple/quadruple command with {'x', 'm', 'v' ...} may not working correctly.
 
 ## Have Fun!
+
+```
+pciutils.efi
+├── PciUtilsPkg
+│   ├── Core
+│   │   └── pciutils
+│   ├── Include
+│   │   ├── config.h
+│   │   └── sys
+│   │       ├── alloca.h
+│   │       └── io.h
+│   ├── Library
+│   │   └── PciUtilsLib
+│   │       └── PciUtilsLib.inf
+│   ├── PciUtilsPkg.dec
+│   ├── PciUtilsPkg.dsc
+│   └── Platform
+│       ├── example.inf
+│       ├── lspci.inf
+│       └── setpci.inf
+└── README.md
+```

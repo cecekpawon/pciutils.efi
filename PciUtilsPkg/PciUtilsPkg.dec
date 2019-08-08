@@ -11,9 +11,6 @@
   DEC_SPECIFICATION = 0x00010006
 
 [Includes]
-  .
-  sys
-  pciutils/lib
-
-[LibraryClasses]
-  PciUtilsLib|pciutils/lib/config.h
+  Include
+  Include/sys
+  Core/pciutils/lib

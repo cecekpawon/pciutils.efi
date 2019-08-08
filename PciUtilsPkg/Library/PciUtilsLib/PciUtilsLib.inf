@@ -1,0 +1,46 @@
+#
+# INF file for "PCILIB"
+#
+# Timothy Lin 2019, BSD 3-Clause License.
+#
+
+[Defines]
+  BASE_NAME         = PciUtilsLib
+  FILE_GUID         = b75ab2ae-b942-11e9-93ed-1b601dc797fb
+  INF_VERSION       = 0x00010006
+  MODULE_TYPE       = DXE_DRIVER
+  LIBRARY_CLASS     = PciUtilsLib|DXE_DRIVER DXE_CORE UEFI_APPLICATION UEFI_DRIVER
+  VERSION_STRING    = 0.1
+
+[Sources]
+  PciUtilsPkg/Core/pciutils/lib/access.c
+# PciUtilsPkg/Core/pciutils/lib/aix-device.c
+  PciUtilsPkg/Core/pciutils/lib/caps.c
+# PciUtilsPkg/Core/pciutils/lib/darwin.c
+  PciUtilsPkg/Core/pciutils/lib/dump.c
+# PciUtilsPkg/Core/pciutils/lib/fbsd-device.c
+  PciUtilsPkg/Core/pciutils/lib/filter.c
+  PciUtilsPkg/Core/pciutils/lib/generic.c
+  PciUtilsPkg/Core/pciutils/lib/i386-ports.c
+  PciUtilsPkg/Core/pciutils/lib/init.c
+  PciUtilsPkg/Core/pciutils/lib/names.c
+  PciUtilsPkg/Core/pciutils/lib/names-cache.c
+  PciUtilsPkg/Core/pciutils/lib/names-hash.c
+  PciUtilsPkg/Core/pciutils/lib/names-hwdb.c
+  PciUtilsPkg/Core/pciutils/lib/names-net.c
+  PciUtilsPkg/Core/pciutils/lib/names-parse.c
+# PciUtilsPkg/Core/pciutils/lib/nbsd-libpci.c
+# PciUtilsPkg/Core/pciutils/lib/obsd-device.c
+  PciUtilsPkg/Core/pciutils/lib/params.c
+# PciUtilsPkg/Core/pciutils/lib/proc.c
+# PciUtilsPkg/Core/pciutils/lib/sylixos-device.c
+# PciUtilsPkg/Core/pciutils/lib/sysfs.c
+  PciUtilsPkg/Include/config.h
+
+[Packages]
+  MdePkg/MdePkg.dec
+  StdLib/StdLib.dec
+
+[LibraryClasses]
+  IoLib
+  LibString

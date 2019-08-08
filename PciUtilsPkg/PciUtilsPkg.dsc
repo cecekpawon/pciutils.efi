@@ -16,7 +16,7 @@
 
 [LibraryClasses]
   !include StdLib/StdLib.inc
-  PciUtilsLib|PciUtilsPkg/PciUtilsLib.inf
+  PciUtilsLib|PciUtilsPkg/Library/PciUtilsLib/PciUtilsLib.inf
   BaseLib|MdePkg/Library/BaseLib/BaseLib.inf
   UefiLib|MdePkg/Library/UefiLib/UefiLib.inf
   HiiLib|MdeModulePkg/Library/UefiHiiLib/UefiHiiLib.inf
@@ -36,6 +36,6 @@
   DevicePathLib|MdePkg/Library/UefiDevicePathLibDevicePathProtocol/UefiDevicePathLibDevicePathProtocol.inf
 
 [Components]
-  PciUtilsPkg/lspci.inf
-  PciUtilsPkg/setpci.inf
-  PciUtilsPkg/example.inf
+  PciUtilsPkg/Platform/lspci.inf
+  PciUtilsPkg/Platform/setpci.inf
+  PciUtilsPkg/Platform/example.inf

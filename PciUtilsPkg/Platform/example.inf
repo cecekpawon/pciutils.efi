@@ -1,20 +1,19 @@
 #
-# INF file for "setpci"
+# INF file for "example.c"
 #
 # Timothy Lin 2019, BSD 3-Clause License.
 #
 
 [Defines]
-  BASE_NAME         = setpci
-  FILE_GUID         = 5361a02e-b973-11e9-a35b-3bfff13cdbe2
+  BASE_NAME         = example
+  FILE_GUID         = a9514746-b973-11e9-847b-eb83b0fcf315
   ENTRY_POINT       = ShellCEntryLib
   INF_VERSION       = 0x00010006
   MODULE_TYPE       = UEFI_APPLICATION
   VERSION_STRING    = 0.1
 
 [Sources.x64]
-  pciutils/setpci.c
-  pciutils/common.c
+  PciUtilsPkg/Core/pciutils/example.c
 
 [Packages]
   PciUtilsPkg/PciUtilsPkg.dec
