@@ -8,7 +8,7 @@ pciutils.efi is a UDK/EDK2 porting of the GNU's [pciutils](https://github.com/pc
 
 ## Generic prerequisites for the UDK porting:
 0. Reference:
-    - [Getting Started with EDK II](https://github.com/tianocore/tianocore.github.io/wiki/Getting%20Started%20with%20EDK%20II) 
+    - [Getting Started with EDK II](https://github.com/tianocore/tianocore.github.io/wiki/Getting%20Started%20with%20EDK%20II)
     - [Xcode](https://github.com/tianocore/tianocore.github.io/wiki/Xcode)
 1. nasm (2.0 or above)
 2. iasl (version 2018xxxx or later)
@@ -20,7 +20,7 @@ pciutils.efi is a UDK/EDK2 porting of the GNU's [pciutils](https://github.com/pc
 ## Tool installation for any Debian-Based Linux:
  `$ sudo apt update ; sudo apt install nasm iasl build-essential uuid-dev`
 
-## Usage: 
+## Usage:
 0. Change-directory to folder **pciutils.efi** .
 1. (Optional) Edit `config.py` for the settings accordingly in: WORKSPACE, TARGET_TXT.
 2. (Optional) Edit `CODETREE` in `config.py` to specify where to place the downloaded source files of the UDK git repo or any other additional respos.
@@ -43,21 +43,26 @@ pciutils.efi is a UDK/EDK2 porting of the GNU's [pciutils](https://github.com/pc
 ```
 pciutils.efi
 ├── PciUtilsPkg
-│   ├── Core
-│   │   └── pciutils
-│   ├── Include
-│   │   ├── config.h
-│   │   └── sys
-│   │       ├── alloca.h
-│   │       └── io.h
-│   ├── Library
-│   │   └── PciUtilsLib
-│   │       └── PciUtilsLib.inf
-│   ├── PciUtilsPkg.dec
-│   ├── PciUtilsPkg.dsc
-│   └── Platform
-│       ├── example.inf
-│       ├── lspci.inf
-│       └── setpci.inf
+│   ├── Build
+│   │   └── X64
+│   │       ├── lspci.efi
+│   │       ├── pci.ids.gz
+│   │       └── setpci.efi
+│   ├── Core
+│   │   └── pciutils
+│   ├── Include
+│   │   ├── config.h
+│   │   └── sys
+│   │       ├── alloca.h
+│   │       └── io.h
+│   ├── Library
+│   │   └── PciUtilsLib
+│   │       └── PciUtilsLib.inf
+│   ├── PciUtilsPkg.dec
+│   ├── PciUtilsPkg.dsc
+│   └── Platform
+│       ├── example.inf
+│       ├── lspci.inf
+│       └── setpci.inf
 └── README.md
 ```

@@ -12,18 +12,18 @@
   MODULE_TYPE       = UEFI_APPLICATION
   VERSION_STRING    = 0.1
 
-[Sources.x64]
+[Sources]
   PciUtilsPkg/Core/pciutils/example.c
 
 [Packages]
-  PciUtilsPkg/PciUtilsPkg.dec
-  StdLib/StdLib.dec
-  ShellPkg/ShellPkg.dec
   MdePkg/MdePkg.dec
+  PciUtilsPkg/PciUtilsPkg.dec
+  ShellPkg/ShellPkg.dec
+  StdLib/StdLib.dec
 
 [LibraryClasses]
-  PciUtilsLib
   BaseLib
-  LibString
   IoLib
+  LibString
+  PciUtilsLib
   UefiLib

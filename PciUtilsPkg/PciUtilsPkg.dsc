@@ -15,7 +15,6 @@
   SUPPORTED_ARCHITECTURES = IA32|X64|ARM|AARCH64
 
 [LibraryClasses]
-  !include StdLib/StdLib.inc
   PciUtilsLib|PciUtilsPkg/Library/PciUtilsLib/PciUtilsLib.inf
   BaseLib|MdePkg/Library/BaseLib/BaseLib.inf
   UefiLib|MdePkg/Library/UefiLib/UefiLib.inf
@@ -35,7 +34,15 @@
   UefiRuntimeServicesTableLib|MdePkg/Library/UefiRuntimeServicesTableLib/UefiRuntimeServicesTableLib.inf
   DevicePathLib|MdePkg/Library/UefiDevicePathLibDevicePathProtocol/UefiDevicePathLibDevicePathProtocol.inf
 
+
 [Components]
+  #PciUtilsPkg/Platform/example.inf
   PciUtilsPkg/Platform/lspci.inf
   PciUtilsPkg/Platform/setpci.inf
-  PciUtilsPkg/Platform/example.inf
+
+!include StdLib/StdLib.inc
+
+[BuildOptions]
+  MSFT:*_*_*_CC_FLAGS   = /wd4098 /wd4115 /wd4244 /wd4245 /wd4267 /wd4305 /wd4459 /wd4706 /wd4477
+  GCC:*_*_*_CC_FLAGS    = -Wno-parentheses -Wno-incompatible-pointer-types  -Wno-unused-command-line-argument -Wno-cast-calling-convention -Wno-lto-type-mismatch
+  XCODE:*_*_*_CC_FLAGS  = -Wno-parentheses

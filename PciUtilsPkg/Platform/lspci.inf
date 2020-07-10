@@ -12,26 +12,27 @@
   MODULE_TYPE       = UEFI_APPLICATION
   VERSION_STRING    = 0.1
 
-[Sources.X64]
-  PciUtilsPkg/Core/pciutils/lspci.c
-  PciUtilsPkg/Core/pciutils/ls-vpd.c
-  PciUtilsPkg/Core/pciutils/ls-caps.c
+[Sources]
+  PciUtilsPkg/Core/pciutils/common.c
   PciUtilsPkg/Core/pciutils/ls-caps-vendor.c
+  PciUtilsPkg/Core/pciutils/ls-caps.c
   PciUtilsPkg/Core/pciutils/ls-ecaps.c
   PciUtilsPkg/Core/pciutils/ls-kernel.c
-  PciUtilsPkg/Core/pciutils/ls-tree.c
   PciUtilsPkg/Core/pciutils/ls-map.c
-  PciUtilsPkg/Core/pciutils/common.c
+  PciUtilsPkg/Core/pciutils/ls-tree.c
+  PciUtilsPkg/Core/pciutils/ls-vpd.c
+  PciUtilsPkg/Core/pciutils/lspci.c
 
 [Packages]
-  PciUtilsPkg/PciUtilsPkg.dec
-  StdLib/StdLib.dec
-  ShellPkg/ShellPkg.dec
   MdePkg/MdePkg.dec
+  PciUtilsPkg/PciUtilsPkg.dec
+  ShellPkg/ShellPkg.dec
+  StdLib/StdLib.dec
 
 [LibraryClasses]
-  PciUtilsLib
   BaseLib
-  LibString
+  DevMedia
   IoLib
+  LibString
+  PciUtilsLib
   UefiLib

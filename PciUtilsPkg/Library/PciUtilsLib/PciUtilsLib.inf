@@ -8,8 +8,8 @@
   BASE_NAME         = PciUtilsLib
   FILE_GUID         = b75ab2ae-b942-11e9-93ed-1b601dc797fb
   INF_VERSION       = 0x00010006
-  MODULE_TYPE       = DXE_DRIVER
-  LIBRARY_CLASS     = PciUtilsLib|DXE_DRIVER DXE_CORE UEFI_APPLICATION UEFI_DRIVER
+  MODULE_TYPE       = BASE
+  LIBRARY_CLASS     = PciUtilsLib
   VERSION_STRING    = 0.1
 
 [Sources]
@@ -42,5 +42,6 @@
   StdLib/StdLib.dec
 
 [LibraryClasses]
-  IoLib
-  LibString
+  #IoLib
+  #LibString
+  LibC
